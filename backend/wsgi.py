@@ -12,8 +12,9 @@ from backend.settings import DEBUG
 from django.core.wsgi import get_wsgi_application
 
 if DEBUG:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.local')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.local")
 else:
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'backend.production')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.production")
 
 application = get_wsgi_application()
+app = application
